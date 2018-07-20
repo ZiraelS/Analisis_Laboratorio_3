@@ -1,0 +1,47 @@
+use LAB3
+
+CREATE TABLE Parametros (
+    NombreParametros varchar(30),
+    ValorParametros varchar(30),
+    FechaModificacion datetime
+)
+
+CREATE TABLE DatosArchivoUno (
+    Identificador int,
+    Descripcion nvarchar(50),
+    FechaProceso datetime,
+	Agregado int,
+	FechaFinal datetime
+)
+
+CREATE TABLE DatosArchivoDos (
+    Identificador int,
+    Descripcion nvarchar(50),
+    FechaProceso datetime,
+	Agregado int,
+	FechaFinal datetime
+)
+
+CREATE TABLE DatosArchivoTres (
+    Identificador int,
+    Descripcion nvarchar(50),
+    FechaProceso datetime,
+	Agregado int,
+	FechaFinal datetime
+)
+
+INSERT INTO Parametros
+VALUES ('TruncarTabla', 'Verdadero', GETDATE());
+
+INSERT INTO Parametros
+VALUES ('CargarArchivos', 'Si', '01/01/2017');
+
+INSERT INTO Parametros
+VALUES ('NombreTabla', 'DatosArchivoTres', '12/25/2016');
+;
+
+------------------------------------------------------------
+drop table Parametros;
+drop table DatosArchivoUno;
+drop table DatosArchivoDos;
+drop table DatosArchivoTres;
