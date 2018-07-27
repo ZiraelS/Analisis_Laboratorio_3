@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{B95F6C40-5772-4007-87BC-64EBE4B16149}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{BDAF5374-5215-45FA-9EBA-35DA4DA40C87}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -110,7 +110,23 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:Variables />
-      <DTS:Executables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Importar archivos"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tarea Flujo de datos"
+          DTS:DTSID="{10B85AEB-DAF9-4778-8B8C-19E676EBE6BF}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Importar archivos"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Nombre"
@@ -358,11 +374,15 @@
           Size="149,42"
           Id="Package\CargarArchivos"
           TopLeft="61.8775520741768,136.885714780583" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Foreach Loop Container\Importar archivos"
+          TopLeft="53,25" />
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="214,55"
-          Size="214,98"
+          PanelSize="272,119"
+          Size="272,162"
           Id="Package\Foreach Loop Container"
           TopLeft="348.714291516616,345.88235559018" />
         <NodeLayout
@@ -451,9 +471,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.306121653788,26.952944350985"
+              EndConnector="39.306121653788,26.952944350985"
               Start="0,0"
-              End="10.306121653788,19.452944350985">
+              End="39.306121653788,19.452944350985">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -464,13 +484,13 @@
                     Point2="0,13.4764721754925"
                     Point3="4,13.4764721754925" />
                   <mssgle:LineSegment
-                    End="6.30612165378801,13.4764721754925" />
+                    End="35.306121653788,13.4764721754925" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.30612165378801,13.4764721754925"
-                    Point2="10.306121653788,13.4764721754925"
-                    Point3="10.306121653788,17.4764721754925" />
+                    Point1="35.306121653788,13.4764721754925"
+                    Point2="39.306121653788,13.4764721754925"
+                    Point3="39.306121653788,17.4764721754925" />
                   <mssgle:LineSegment
-                    End="10.306121653788,19.452944350985" />
+                    End="39.306121653788,19.452944350985" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -675,18 +695,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="348.714291516616,397.287116357612">
+          TopLeft="348.714291516616,426.88235559018">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-161.734698300807,0"
+              EndConnector="-161.734698300807,-27.190478465136"
               Start="0,0"
-              End="-154.234698300807,0">
+              End="-154.234698300807,-27.190478465136">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-154.234698300807,0" />
+                    End="-76.8673491504035,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-76.8673491504035,0"
+                    Point2="-80.8673491504035,0"
+                    Point3="-80.8673491504035,-4" />
+                  <mssgle:LineSegment
+                    End="-80.8673491504035,-23.190478465136" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.8673491504035,-23.190478465136"
+                    Point2="-80.8673491504035,-27.190478465136"
+                    Point3="-84.8673491504035,-27.190478465136" />
+                  <mssgle:LineSegment
+                    End="-154.234698300807,-27.190478465136" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
